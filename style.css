@@ -15,7 +15,9 @@ body{
     
 }
 .login-wrapper{
-    display:block;
+    display:flex;
+    flex-direction:column;
+    flex-wrap:nowrap;
     background-color:rgba(255,255,255,0.1);
     margin:auto;
     border-radius:6px;
@@ -25,6 +27,11 @@ body{
     animation-duration:0.5s;
     
 }
+.social{
+    display:flex;
+    margin:auto;
+}
+
 a{
     text-decoration:none;
     color:#92b7f7;
@@ -54,7 +61,7 @@ a{
     text-align:center;
     padding:10px;
     font-size:16px;
-    width:300px;
+    width:80%;
     border-top:none;
     border-right:none;
     border-left:none;
@@ -72,7 +79,7 @@ a{
 #formbtn{
     border-radius:7px;
     padding:6px;
-    width:280px;
+    width:70%;
     font-size:15px;
     font-weight:bold;
     color:white;
@@ -84,7 +91,7 @@ a{
 .oror:before{
     content: "";
     display: block;
-    width: 130px;
+    width: 33%;
     height: 1px;
     background: rgba(255,255,255,0.4);
     float :left;
@@ -95,7 +102,7 @@ a{
 .oror:after{
     content: "";
     display: block;
-    width: 130px;
+    width: 33%;
     height: 1px;
     background: rgba(255,255,255,0.4);
     float:right;
@@ -106,20 +113,16 @@ a{
 #google,#github,#facebook{
     border-radius:7px;
     padding:6px;
-    width:100px;
     font-size:15px;
     font-weight:bold;
+    width:100px;
     color:white;
     margin:5px;
     border:1px solid rgba(255,255,255,0.3);
     background:transparent;
     cursor:pointer;
 }
-#google img,#github img,#facebook img{
-    width:20px;
-    height:20px;
-    float:right;
-}
+
 #google{
     background-color:#db3236;
 }
@@ -155,3 +158,8 @@ label{
     transition:0.3s;
 }
 
+@media (max-device-width: 1000px) {
+  .login-wrapper{
+      width: 500px;
+  }    
+}
